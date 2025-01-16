@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Tesla.Controllers;
 
 [ApiController]
-[Route("GetAlbum")]
+[Route("api/[controller]")]
 public class TeslaController : ControllerBase
 {
     // public async Task<IActionResult> GetAlbum(){
@@ -15,8 +15,6 @@ public class TeslaController : ControllerBase
     // }
 
     [HttpPost]
-    [Route("RecibirValor")]
-
     public async Task<IActionResult> RecibirValor(string nombre)
     {
         return Ok("mi nombre es " + nombre);
