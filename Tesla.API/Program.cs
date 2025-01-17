@@ -10,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddScoped<IAlbumService, AlbumService>();
 builder.Services.AddScoped<ICalculadoraService, CalculadoraService>();
+builder.Services.AddScoped<ICuadradoService, CuadradoService>();
 
 
 
