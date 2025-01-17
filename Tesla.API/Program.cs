@@ -1,3 +1,5 @@
+using Tesla.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddScoped<IAlbumService, AlbumService>();
+builder.Services.AddScoped<ICalculadoraService, CalculadoraService>();
+
+
 
 var app = builder.Build();
 
