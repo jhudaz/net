@@ -13,8 +13,14 @@ A simple API built with ASP.NET Core to demonstrate basic CRUD operations and se
 - `Controllers`: Contains the API controllers.
   - `TeslaController.cs`
   - `CuadradoController.cs`
+  - `CalculadoraController.cs`
+  - `AlbumController.cs`
 - `Services`: Contains the service interfaces and implementations.
   - `ICuadradoService.cs`
+  - `CuadradoService.cs`
+  - `ICalculadoraService.cs`
+  - `CalculadoraService.cs`
+  - `ICuadradService.cs`
   - `CuadradoService.cs`
 - `Models`: Contains the data models (not retrieved but assumed).
 
@@ -22,10 +28,9 @@ A simple API built with ASP.NET Core to demonstrate basic CRUD operations and se
 
 ### Endpoints
 
-- `GET /api/tesla/GetAlbum`: Returns album details.
-- `POST /api/tesla/ReciboValor`: Receives an album and returns its name.
-- `POST /api/tesla/ReciboUnValor`: Receives a string value.
-- `POST /api/cuadrado/Area`: Calculates the area of a square.
+- `GET /api/tesla/GetAlbum`: Returns all albums.
+- `POST /api/tesla/ReciboValor`: Receives a JSON with two numbers and returns the sum of both.
+- `POST /api/tesla/ReciboUnValor`: Receives a square side and returns its area.
 
 ### Example Requests
 
