@@ -1,27 +1,25 @@
-namespace Tesla.Controllers
+using Microsoft.AspNetCore.Mvc;
+using Tesla.Business.Interfaces;
+
+namespace Tesla.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class AlbumController : ControllerBase
 {
-    using Microsoft.AspNetCore.Mvc;
-    using Tesla.Services;
+    private readonly IAlbumService _albumService;
 
-    [ApiController]
-    [Route("api/[controller]")]
-    public class AlbumController : ControllerBase
+    public AlbumController(IAlbumService albumService)
     {
-        //definir servicio
-        private readonly IAlbumService _albumService;
-
-        //inyectar servicio
-        public AlbumController(IAlbumService albumService)
-        {
-            _albumService = albumService;
-        }
-
-        //request 
-        [HttpGet("albumes")]
-        public async Task<IActionResult> GetAlbums()
-        {
-            var albums = await _albumService.GetAllAlbums();
-            return Ok(albums);
-        }
+        _albumService = albumService;
     }
+
+    [HttpGet("GetAllAlbums")]
+    public async Task<IActionResult> GetAllAlbums()
+    {
+        var albums = await _albumService.GetAllAlbums();
+        return Ok(albums);
+    }
+
 }
+

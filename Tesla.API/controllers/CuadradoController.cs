@@ -1,30 +1,25 @@
-namespace Tesla.Controllers
+using Microsoft.AspNetCore.Mvc;
+using Tesla.Business.Interfaces;
+using Tesla.Models;
+
+namespace Tesla.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class CuadradoController : ControllerBase 
 {
-    using Microsoft.AspNetCore.Mvc;
-    using Tesla.Models;
-    using Tesla.Services;
+    private readonly ICuadradoService _cuadradoService;
 
-    [ApiController]
-    [Route("api/[controller]")]
-    public class CuadradoController: ControllerBase
+    public CuadradoController(ICuadradoService cuadradoService)
     {
-        //declarar servicio
-        private readonly ICuadradoService _cuadradoService;
+        _cuadradoService = cuadradoService;
+    }
 
-        //inyeccion del servicio
-        public CuadradoController(ICuadradoService cuadradoService)
-        {
-            _cuadradoService = cuadradoService;
-        }
 
-        //request
-        [HttpPost]
-        public async Task<IActionResult> Area([FromBody]Cuadrado request)
-        {
-            var resultado = await _cuadradoService.Area(request.Lado);
-            return Ok(resultado);
-        }
-
+    [HttpPost("GetArea")]
+    public async Task<IActionResult> GetArea([FromBody]Cuadrado request)
+    {
+        var area = await _cuadradoService.GetArea(request.Lado);
+        return Ok(area);
     }
 }
-
