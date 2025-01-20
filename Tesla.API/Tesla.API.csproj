@@ -9,5 +9,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="../Tesla.Business/Tesla.Business.csproj"/>
+    <ProjectReference Include="../Tesla.Data/Tesla.Data.csproj"/>
+  </ItemGroup>
+
+  
 
 </Project>

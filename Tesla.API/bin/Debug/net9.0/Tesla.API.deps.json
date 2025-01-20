@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v9.0": {
       "Tesla.API/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.OpenApi": "9.0.0"
+          "Microsoft.AspNetCore.OpenApi": "9.0.0",
+          "Tesla.Business": "1.0.0",
+          "Tesla.Data": "1.0.0"
         },
         "runtime": {
           "Tesla.API.dll": {}
@@ -30,6 +32,25 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
             "assemblyVersion": "1.6.17.0",
             "fileVersion": "1.6.17.0"
+          }
+        }
+      },
+      "Tesla.Business/1.0.0": {
+        "dependencies": {
+          "Tesla.Data": "1.0.0"
+        },
+        "runtime": {
+          "Tesla.Business.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Tesla.Data/1.0.0": {
+        "runtime": {
+          "Tesla.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -54,6 +75,16 @@
       "sha512": "sha512-Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
       "path": "microsoft.openapi/1.6.17",
       "hashPath": "microsoft.openapi.1.6.17.nupkg.sha512"
+    },
+    "Tesla.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tesla.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
