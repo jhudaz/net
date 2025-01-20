@@ -1,3 +1,4 @@
+
 # Tesla API
 
 A simple API built with ASP.NET Core to demonstrate basic CRUD operations and service injection.
@@ -11,7 +12,6 @@ A simple API built with ASP.NET Core to demonstrate basic CRUD operations and se
 ## Project Structure
 
 - `Controllers`: Contains the API controllers.
-  - `TeslaController.cs`
   - `CuadradoController.cs`
   - `CalculadoraController.cs`
   - `AlbumController.cs`
@@ -29,8 +29,8 @@ A simple API built with ASP.NET Core to demonstrate basic CRUD operations and se
 ### Endpoints
 
 - `GET /api/tesla/GetAlbum`: Returns all albums.
-- `POST /api/tesla/ReciboValor`: Receives a JSON with two numbers and returns the sum of both.
-- `POST /api/tesla/ReciboUnValor`: Receives a square side and returns its area.
+- `POST /api/calculadora/sumar`: Receives a JSON with two numbers and returns the sum of both.
+- `POST /api/cuadrado/getArea`: Receives a square side and returns its area.
 
 ### Example Requests
 
